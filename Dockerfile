@@ -10,8 +10,8 @@ FROM centos
 MAINTAINER Ben Withem
 
 ENV HOME /root
-RUN yum update
-RUN yum --nogpg install -y zsh git tmux
+RUN yum -y update
+RUN yum --nogpg -y install zsh git tmux
 
 ################## BEGIN INSTALLATION ######################
 RUN git clone git://github.com/bwithem/oh-my-zsh.git ~/.oh-my-zsh \
